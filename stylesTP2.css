@@ -1,0 +1,160 @@
+body {
+    background: linear-gradient(135deg, #f0f4f8 0%, #e6eef5 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#titre1 {
+    color: #2d3a4a;
+    font-size: 2rem;
+    margin: 0 auto 30px auto;
+    padding: 15px;
+    max-width: 600px;
+    border-bottom: 2px solid #4a90e2;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#container {
+    margin: 20px auto;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#tache, #recherche {
+    padding: 8px 12px;
+    border: 1px solid #4a90e2;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    width: 180px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#tache:focus, #recherche:focus {
+    outline: none;
+    border-color: #357ab8;
+    box-shadow: 0 0 0 3px rgba(74,144,226,0.1);
+}
+
+#ajouter, #supprimerTout {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#ajouter {
+    background: #4a90e2;
+    min-width: 80px;
+}
+
+#supprimerTout {
+    background: #e94e4e;
+}
+
+#ajouter:hover, #supprimerTout:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#liste {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#liste li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+    padding: 12px 15px;
+    background: #f8fafc;
+    border-radius: 6px;
+    border: 1px solid #edf2f7;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#liste li:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tache-validee {
+    background: #f0f4f8 !important;
+}
+
+.tache-validee .tache-text {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.btn-valider, .btn-supprimer {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-valider {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.btn-valider.disabled {
+    background: #e2e8f0;
+    color: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+    pointer-events: none;
+}
+
+.btn-supprimer {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.btn-supprimer:hover {
+    transform: scale(1.05);
+}
+
+.btn-valider:not(.disabled):hover {
+    transform: scale(1.05);
+    background: #bbf7d0;
+}
+
+.btn-supprimer:hover {
+    background: #fecaca;
+}
+
+#compteur {
+    max-width: 600px;
+    margin: 15px auto;
+    padding: 10px;
+    font-weight: 500;
+    text-align: right;
+    color: #2d3a4a;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
