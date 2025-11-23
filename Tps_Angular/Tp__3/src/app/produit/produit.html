@@ -1,0 +1,14 @@
+<div class="produit">
+  <h3>{{ nomProduit }}</h3>
+  <img [src]="imageUrl" alt="Image du produit" width="200">
+
+  <p [class.en-stock]="enStock" [style.color]="enStock ? 'green' : 'red'">
+    {{ enStock ? 'Produit en stock' : 'Rupture de stock' }}
+  </p>
+
+  <p>Prix : {{ prix | currency:'EUR':'symbol' }}</p>
+
+  <button (click)="afficherAlerte()">Ajouter au panier (alerte)</button>
+  <button (click)="ajouterProduit()" [disabled]="!enStock">Ajouter au Panier</button>
+  <button (click)="basculerStock()">Changer état</button>
+</div>

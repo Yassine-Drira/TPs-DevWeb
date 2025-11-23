@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Liste des produits</h2>
+
+  <div *ngFor="let produit of produits" class="produit">
+    <span class="nom">{{ produit.nom }}</span>
+
+    <div class="stock-col">
+      <!-- Couleur dynamique avec ngStyle -->
+      <span
+        class="stock"
+        [ngStyle]="{ color: getCouleur(produit.stock), 'font-weight': 'bold' }"
+      >
+        Stock : {{ produit.stock }}
+      </span>
+
+      <input
+        type="number"
+        class="stock-input"
+        [(ngModel)]="produit.stock"
+      />
+    </div>
+
+  </div>
+</div>

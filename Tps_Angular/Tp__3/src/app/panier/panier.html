@@ -1,0 +1,14 @@
+<div class="panier">
+  <h3>Panier</h3>
+  <app-produit nomProduit="Ordinateur HP" (ajouterAuPanier)="gererAjoutAuPanier($event)"></app-produit>
+
+  <h4>Historique des ajouts</h4>
+  <ul>
+    <li *ngFor="let m of messages">{{ m }}</li>
+  </ul>
+
+  <h4>Items du panier</h4>
+  <ul>
+    <li *ngFor="let item of panierItems">{{ item.nom }} : {{ item.prix | currency:'EUR':'symbol' }}</li>
+  </ul>
+</div>

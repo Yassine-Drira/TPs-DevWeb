@@ -1,0 +1,17 @@
+h2 {
+  font-size: 20px;                           /* légèrement plus grand */
+  font-weight: 700;                          /* poids plus marqué */
+  color: #FFFFFF;
+  background: linear-gradient(120deg, #6B2E8A, #A46BC6); /* dégradé dynamique */
+  padding: 14px 16px;                        /* padding plus généreux */
+  border-radius: 10px;                        /* coins plus arrondis */
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(107,46,138,0.15); /* ombre plus profonde */
+  letter-spacing: 0.5px;                     /* meilleure lisibilité */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+h2:hover {
+  transform: scale(1.05) rotate(-1deg);      /* effet léger au survol */
+  box-shadow: 0 12px 28px rgba(107,46,138,0.2);
+}

@@ -1,0 +1,55 @@
+/* Structure générale */
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+  padding: 20px;
+}
+
+/* ACTIVITÉ 3 - Classes d'importance (OBLIGATOIRES) */
+.important { 
+  background-color: #ffcccc; 
+  border: 1px solid red; 
+}
+.moyen { 
+  background-color: #fff2cc; 
+  border: 1px solid orange; 
+}
+.faible { 
+  background-color: #ccffcc; 
+  border: 1px solid green; 
+}
+
+/* Contenu principal */
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.section {
+  padding: 25px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  color: #2d3436;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+  border-left: 4px solid #74b9ff;
+  padding-left: 15px;
+}
+
+/* Ligne de séparation */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ddd, transparent);
+  margin: 0;
+}

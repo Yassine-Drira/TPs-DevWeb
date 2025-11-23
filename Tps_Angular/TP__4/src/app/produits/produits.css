@@ -1,0 +1,58 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2d3436;
+}
+
+.produit {
+  display: grid;
+  grid-template-columns: 1fr 160px; /* left: name, right: stock column */
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 12px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s;
+}
+
+.produit:hover {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.nom {
+  font-weight: bold;
+  color: #2d3436;
+}
+
+.stock-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.stock {
+  font-weight: bold;
+  margin: 0;
+}
+
+.stock-input, input[type="number"] {
+  width: 100%;
+  max-width: 120px;
+  padding: 8px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.stock-input:focus, input[type="number"]:focus {
+  outline: none;
+  border-color: #74b9ff;
+}

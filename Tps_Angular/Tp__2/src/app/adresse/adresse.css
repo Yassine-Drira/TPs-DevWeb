@@ -1,0 +1,19 @@
+p {
+  font-size: 18px;                  /* un peu plus grand */
+  color: #1F3B73;                   /* bleu foncé */
+  background: linear-gradient(135deg, #FDEFF9, #E4F0FF); /* dégradé de fond */
+  padding: 16px 20px;               /* padding plus généreux */
+  border-left: 8px dashed #FF6F61; /* bordure gauche en pointillé et couleur corail */
+  text-align: left;                 /* alignement à gauche */
+  border-radius: 12px;              /* coins plus arrondis */
+  margin: 12px 0;                   /* espacement plus grand */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* ombre subtile */
+  font-family: 'Verdana', sans-serif;    /* nouvelle police */
+  transition: all 0.3s ease;        /* transitions douces pour hover ou changement */
+}
+
+/* Effet au survol */
+p:hover {
+  transform: scale(1.05) rotate(-1deg); /* léger agrandissement et rotation */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15); /* ombre plus prononcée */
+}

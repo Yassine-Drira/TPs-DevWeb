@@ -1,0 +1,8 @@
+.en-stock {
+  font-weight: bold;
+}
+.produit img {
+  border: 1px solid #ddd;
+  padding: 4px;
+  background: #fff;
+}

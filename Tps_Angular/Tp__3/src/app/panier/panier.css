@@ -1,0 +1,8 @@
+.panier {
+  border: 1px dashed #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+.panier h3 {
+  margin-top: 0;
+}

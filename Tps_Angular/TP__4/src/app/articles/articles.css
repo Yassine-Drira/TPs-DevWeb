@@ -1,0 +1,149 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #2d3436;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #e9ecef;
+}
+
+.input, .textarea, .select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  background: white;
+}
+
+.textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.btn {
+  background: #0984e3;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #0770c4;
+}
+
+.article {
+  background: white;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s;
+}
+
+.article:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.article h3 {
+  margin: 0 0 10px 0;
+  color: #2d3436;
+  font-size: 1.2em;
+}
+
+.article p {
+  margin: 0 0 10px 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+.article small {
+  color: #777;
+  font-style: italic;
+}
+/* ============================
+   Effets selon l’importance
+   ============================ */
+
+/* Importance faible : vert calme */
+.article.faible {
+  border-left: 6px solid #55efc4;
+  background: #f3fffb;
+  position: relative;
+}
+
+.article.faible::before {
+  content: "🟢 ";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 0.85rem;
+  color: #27ae60;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+/* Importance moyenne : orange */
+.article.moyen {
+  border-left: 6px solid #fdcb6e;
+  background: #fff8e6;
+  position: relative;
+}
+
+.article.moyen::before {
+  content: "🟠 ";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 0.85rem;
+  color: #e67e22;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+/* Importance élevée : rouge + glow */
+.article.important {
+  border-left: 6px solid #d63031;
+  background: #fff1f1;
+  box-shadow: 0 0 12px rgba(214,48,49,0.3);
+  position: relative;
+}
+
+.article.important::before {
+  content: "🔴 ";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 0.9rem;
+  color: #c0392b;
+  font-weight: 700;
+  opacity: 1;
+}
+
+/* Petit effet hover commun */
+.article.faible:hover {
+  box-shadow: 0 4px 14px rgba(39, 174, 96, 0.15);
+}
+.article.moyen:hover {
+  box-shadow: 0 4px 14px rgba(243, 156, 18, 0.18);
+}
+.article.important:hover {
+  box-shadow: 0 4px 18px rgba(231, 76, 60, 0.25);
+  transform: translateY(-3px);
+}

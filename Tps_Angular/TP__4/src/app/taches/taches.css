@@ -1,0 +1,133 @@
+/* Layout global */
+.container {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fdfdfd;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Titre principal */
+h2 {
+  text-align: left;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #213547;
+  border-left: 6px solid #4C8BF5;
+  padding-left: 12px;
+}
+
+/* Formulaire */
+.form {
+  display: grid;
+  grid-template-columns: 1fr 160px 140px;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.input, .select {
+  padding: 13px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #b5c2d4;
+  background: #ffffff;
+  transition: border 0.3s;
+}
+
+.input:focus, .select:focus {
+  border-color: #4C8BF5;
+  outline: none;
+}
+
+/* Bouton principal */
+.btn {
+  grid-column: span 3;
+  padding: 12px;
+  background: #4C8BF5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+  background: #3A73D6;
+  transform: translateY(-2px);
+}
+
+/* Carte de tâche */
+.tache {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e1e5ea;
+  margin-bottom: 15px;
+  transition: all 0.25s ease;
+  align-items: center;
+}
+
+.tache:hover {
+  transform: translateX(4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Texte de la tâche */
+.tache span {
+  font-size: 16px;
+  font-weight: 500;
+  flex: 1;
+  margin-right: 15px;
+  color: #2c3e50;
+}
+
+/* Priorité (gérée par ngStyle dans le composant, mais base neutre ici) */
+.tache small {
+  font-size: 14px;
+  width: 120px;
+  text-align: right;
+}
+
+/* Tâche complétée */
+.completee {
+  background: #f1f3f5;
+  border-color: #d9dfe5;
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
+/* Bouton statut */
+.btnStatut {
+  padding: 8px 12px;
+  background: #FF6B6B;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.25s;
+  min-width: 100px;
+}
+
+.btnStatut:hover {
+  background: #e45858;
+}
+
+/* Message liste vide */
+.vide {
+  text-align: center;
+  padding: 35px;
+  background: #f5f7fa;
+  border: 2px dashed #cfd7e0;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #6c7a89;
+  font-style: italic;
+  margin-top: 20px;
+}

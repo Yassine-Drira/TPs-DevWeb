@@ -1,0 +1,42 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;                        /* espacement plus généreux */
+  max-width: 350px;                  /* un peu plus large */
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid rgba(75,28,95,0.1);
+  border-radius: 12px;               /* coins plus arrondis */
+  background: linear-gradient(135deg, #fffafa, #f3f0ff); /* dégradé subtil */
+  box-shadow: 0 8px 20px rgba(107,46,138,0.1); /* ombre plus prononcée */
+  transition: all 0.3s ease;
+}
+
+label {
+  font-weight: 700;                  /* plus gras */
+  color: #6B2E8A;                    /* couleur mauve plus profonde */
+  font-size: 0.95rem;
+}
+
+input {
+  padding: 10px 12px;
+  border: 1px solid rgba(75,28,95,0.12);
+  border-radius: 8px;                /* coins plus arrondis */
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  border-color: #C9A34B;             /* couleur or */
+  box-shadow: 0 0 0 4px rgba(201,163,75,0.2);
+  outline: none;
+  background-color: #fff9f2;         /* léger fond au focus */
+}
+
+p {
+  margin-top: 12px;
+  font-style: normal;                /* plus classique */
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #A46BC6;                    /* mauve léger */
+  text-align: center;
+}

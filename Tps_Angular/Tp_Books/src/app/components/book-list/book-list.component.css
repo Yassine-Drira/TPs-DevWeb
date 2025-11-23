@@ -1,0 +1,180 @@
+/* Conteneur du tableau */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 30px;
+  padding: 15px;
+  background: #f7f9fc;
+  border-radius: 16px;
+  border: 1px solid #e1e5eb;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s;
+}
+
+.table-wrapper:hover {
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+/* Tableau */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: "Inter", sans-serif;
+  color: #2b2b2b;
+}
+
+/* En-tête */
+thead th {
+  background: linear-gradient(120deg, #6c5ce7, #a29bfe);
+  color: #fff;
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #5a4dcf;
+  border-radius: 8px 8px 0 0;
+  transition: background 0.3s;
+}
+
+/* Cellules */
+tbody td {
+  padding: 14px 12px;
+  font-size: 15px;
+  border-bottom: 1px solid #e3e7ed;
+  background: #ffffff;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Ligne hover */
+tbody tr {
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+tbody tr:hover td {
+  transform: translateY(-2px);
+  background: #f0f4ff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Boutons d’action */
+.action-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  min-width: 90px;
+}
+
+/* Bouton modifier */
+.btn-edit {
+  background: linear-gradient(120deg, #ffeaa7, #fab1a0);
+  color: #2d3436;
+}
+
+.btn-edit:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+  background: linear-gradient(120deg, #ffd97a, #ff8f80);
+}
+
+/* Bouton supprimer */
+.btn-delete {
+  background: linear-gradient(120deg, #ff6b6b, #e55039);
+  color: #fff;
+}
+
+.btn-delete:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+  background: linear-gradient(120deg, #ff5252, #d9432b);
+}
+
+/* Responsive mobile */
+@media (max-width: 700px) {
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 18px;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    background: #ffffff;
+    border: 1px solid #e0e3eb;
+  }
+
+  tbody td {
+    padding: 10px 8px;
+    text-align: right;
+    position: relative;
+    font-size: 14px;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+  }
+
+  .action-btn {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+/* Boutons d'action dans le tableau */
+table button {
+  padding: 6px 14px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  min-width: 90px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Bouton Modifier */
+table button:first-child {
+  background: linear-gradient(120deg, #74b9ff, #0984e3);
+  color: #fff;
+}
+
+table button:first-child:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  background: linear-gradient(120deg, #55a0ff, #0769c4);
+}
+
+/* Bouton Supprimer */
+table button:last-child {
+  background: linear-gradient(120deg, #ff7675, #d63031);
+  color: #fff;
+}
+
+table button:last-child:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  background: linear-gradient(120deg, #ff5252, #c12b28);
+}

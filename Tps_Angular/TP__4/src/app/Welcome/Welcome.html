@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Connexion utilisateur</h2>
+
+  <div *ngIf="!isLoggedIn; else welcomeBlock">
+    <input
+      type="text"
+      placeholder="Entrez votre prénom"
+      [(ngModel)]="username"
+      class="input"
+    />
+    <button (click)="basculer()" class="btn">Se connecter</button>
+  </div>
+
+  <ng-template #welcomeBlock>
+    <h3>Bienvenue, {{ username }} ! </h3>
+    <button (click)="basculer()" class="btn logout">Se déconnecter</button>
+  </ng-template>
+</div>

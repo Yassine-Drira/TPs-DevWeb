@@ -1,0 +1,61 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  border: 1px solid #e0e0e0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2d3436;
+  font-size: 1.3em;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #74b9ff;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #00b894;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #00a085;
+}
+
+.btn.logout {
+  background: #e17055;
+}
+
+.btn.logout:hover {
+  background: #d63031;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #2d3436;
+}

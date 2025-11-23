@@ -1,0 +1,28 @@
+body {
+    background-color: #F8F4FB;          /* fond légèrement plus doux */
+    color: #2b0f2f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* police moderne */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Small utility classes */
+.tp-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(75,28,95,0.08);
+    border-radius: 12px;                /* coins arrondis plus doux */
+    padding: 16px;
+    box-shadow: 0 6px 20px rgba(107,46,138,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tp-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(107,46,138,0.1);
+}
+
+.tp-muted {
+    color: #9A6BC6;                     /* ton mauve plus doux */
+    font-weight: 500;
+}

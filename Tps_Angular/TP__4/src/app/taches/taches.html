@@ -1,0 +1,45 @@
+<div class="container">
+  
+
+  <!-- Formulaire d'ajout -->
+  <div class="form">
+    <input
+      type="text"
+      placeholder="Nouvelle tâche"
+      [(ngModel)]="nouvelleDescription"
+      class="input"
+    />
+
+    <select [(ngModel)]="nouvellePriorite" class="select">
+      <option value="basse">Basse</option>
+      <option value="moyenne">Moyenne</option>
+      <option value="haute">Haute</option>
+    </select>
+
+    <button (click)="ajouterTache()" class="btn">Ajouter</button>
+  </div>
+
+  <!-- Affichage conditionnel -->
+  <div *ngIf="taches.length > 0; else pasDeTaches">
+  
+  <!-- Liste des tâches -->
+  <div
+    *ngFor="let tache of taches"
+    class="tache"
+    [ngClass]="{ completee: tache.completee }"
+    [ngStyle]="{ color: getCouleur(tache.priorite) }"
+  >
+    <span>{{ tache.description }}</span>
+    <small>(Priorité : {{ tache.priorite }})</small>
+    <button (click)="basculerStatut(tache)" class="btnStatut">
+      {{ tache.completee ? 'Annuler' : 'Terminer' }}
+    </button>
+  </div>
+
+</div>
+
+<!-- Template affiché si aucune tâche -->
+<ng-template #pasDeTaches>
+  <p>Vous n'avez pas de tâches en cours</p>
+</ng-template>
+
